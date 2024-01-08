@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("/images/OIG1.webp");
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("images/OIG1.webp");
 }
 
 .u-section-1 .u-sheet-1 {
@@ -613,7 +613,7 @@
 }
 
 .u-section-4 .u-image-1 {
-  background-image: url("/images/Untitleddesign.png");
+  background-image: url("images/Untitleddesign.png");
   background-position: 50% 50%;
   min-height: 426px;
 }
@@ -735,7 +735,7 @@
     margin-left: 70px;
   }
 } .u-section-5 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("/images/Untitsdgled1.webp");
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("images/Untitsdgled1.webp");
   background-position: 50% 50%;
 }
 
