@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en-US"><head>
+
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consent Mode Setup</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Set default consent state before user grants consent
+    gtag('consent', 'default', {
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500,
+    });
+    dataLayer.push({'gtm.start': new Date().getTime(), 'event': 'gtm.js'});
+  </script>
+
+
+
+
+
+	
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="keywords" content=" video advertising truck
@@ -135,7 +160,61 @@ targeted audience engagement">
 <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en"><!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-NGH4NFRC4W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --><header class="u-align-center-xs u-border-1 u-border-grey-25 u-clearfix u-header u-image u-sticky u-header" id="sec-fe27" data-image-width="1200" data-image-height="673"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">
+<!-- End Google Tag Manager (noscript) -->
+	  
+	   <!-- Consent Banner -->
+  <div id="consent-banner">
+    <p>We use cookies to personalize content and ads, to provide social media features and to analyze our traffic. Do you consent to the use of cookies?</p>
+    <button id="grantButton">I Consent</button>
+    <button id="denyButton">I Do Not Consent</button>
+  </div>
+
+  <script>
+    // Function to handle consent grant
+    document.getElementById('grantButton').addEventListener('click', function() {
+      localStorage.setItem('consentGranted', 'true');
+
+      gtag('consent', 'update', {
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+
+      // Load Tag Manager script
+      var gtmScript = document.createElement('script');
+      gtmScript.async = true;
+      gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=Container ID';
+      
+      var firstScript = document.getElementsByTagName('script')[0];
+      firstScript.parentNode.insertBefore(gtmScript, firstScript);
+
+      // Hide consent banner
+      document.getElementById('consent-banner').style.display = 'none';
+    });
+
+    // Optional: handle consent denial
+    document.getElementById('denyButton').addEventListener('click', function() {
+      localStorage.setItem('consentGranted', 'false');
+      
+      // Hide consent banner
+      document.getElementById('consent-banner').style.display = 'none';
+    });
+
+    // Load the consent banner initially
+    window.onload = function() {
+      var consentGranted = localStorage.getItem('consentGranted');
+      if (!consentGranted) {
+        document.getElementById('consent-banner').style.display = 'block';
+      }
+    };
+  </script>
+	  
+	  
+	  
+	  
+	  
+	  <header class="u-align-center-xs u-border-1 u-border-grey-25 u-clearfix u-header u-image u-sticky u-header" id="sec-fe27" data-image-width="1200" data-image-height="673"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">
         <nav class="u-align-left u-menu u-menu-hamburger u-nav-spacing-25 u-offcanvas u-menu-1" data-responsive-from="XL">
           <div class="menu-collapse">
             <a class="u-button-style u-nav-link" href="#" style="padding: 4px 0px; font-size: calc(1em + 8px);">
