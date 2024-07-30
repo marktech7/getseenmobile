@@ -233,7 +233,7 @@
     width: 340px;
   }
 } .u-section-3 {
-  background-image: url("images/getseenmedia.jpg");
+  background-image: url("/images/getseenmedia.jpg");
 }
 
 .u-section-3 .u-sheet-1 {
@@ -920,7 +920,7 @@
     margin-left: initial;
   }
 } .u-section-6 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/lodinews.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/lodinews.jpg');
 }
 
 .u-section-6 .u-sheet-1 {
@@ -1019,7 +1019,7 @@
     min-height: 240px;
   }
 } .u-section-8 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/a6f29f62bf45248d670a5d782e286b86b4efdbc8-5.jpeg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/a6f29f62bf45248d670a5d782e286b86b4efdbc8-5.jpeg');
   background-position: 50% 50%;
 }
 
